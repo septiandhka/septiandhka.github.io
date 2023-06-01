@@ -1,0 +1,32 @@
+.jumbotron {
+  padding-top: 8rem;
+  background-color: #2d2d2d;
+}
+#serendipity {
+  background-color: #2d2d2d;
+}
+img {
+  cursor: pointer;
+}
+#serendipity .container .card:hover img {
+  outline: 0.2rem solid #ffffff;
+  outline-offset: 0;
+  transform: scale(0.94);
+}
+section {
+  padding-top: 4rem;
+}
+@font-face {
+  font-family: "NamaFont";
+  src: url("font/Doctor\ Glitch.otf");
+}
+.custom-brand {
+  font-family: "NamaFont", sans-serif;
+}
+.custom-button {
+  background-color: #2d2d2d;
+}
+
+#card-popup .modal-img {
+  width: 100%;
+}
