@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio | Septian Andhika</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
     <style>
@@ -48,7 +52,7 @@
     <section class="jumbotron text-center text-light">
       <img src="img/me.jpg" alt="Septian Andhika" width="300" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Septian Andhika</h1>
-      <i class="lead">College Student</i>
+      <i class="lead"></i>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#aa2a2a"
@@ -70,13 +74,13 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center text-light">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <em>
               I am an informatics engineering student from Muhammadiyah Jakarta University, currently I'm in my 4th semester. By taking this major, I have the opportunity to combine creativity with technology. I am interested in developing
               innovative solutions, applications and systems that can have a positive impact on people's lives. I can learn about UI/UX design, software development, and concepts that will allow me to turn creative ideas into reality.
             </em>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <em>
               I also have a passion for Arts. I find joy in listening to my music while singing on it, drawing the moment, taking photos and everything. For me, art is a way to communicate and express myself. I believe that the
               collaboration of my interest of Art with my knowledge of Technology can provide a unique perspectives, creative solutions while bringing the necessary technical acumen to the team and innovation to the bussines world.
@@ -106,7 +110,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card" data-aos="fade-right" data-aos-duration="1000">
               <img src="img/red.png" class="card-img-top blur-image" alt="Serendipity 1" />
               <div class="card-body">
                 <em>
@@ -119,7 +123,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
               <img src="img/mid.png" class="card-img-top" alt="Serendipity 2" />
               <div class="card-body">
                 <em class="card-text">Saya yang sedang memandangi salah satu lukisan pada pameran Chiharu Shiota : The Soul Trembles.</em>
@@ -127,7 +131,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
               <img src="img/black.png" class="card-img-top" alt="Serendipity 3" />
               <div class="card-body">
                 <em>
@@ -145,6 +149,7 @@
             </div>
           </div>
           <iframe
+            data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100"
             width="50%"
             height="150"
             scrolling="no"
@@ -259,6 +264,25 @@
       });
     </script>
     <!--End-CSS Modal -->
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', {duration:2, delay:0.5, text:'College Student'});
+      gsap.from('.jumbotron img', {duration:1, opacity:0, delay:0.2});
+      gsap.from('.navbar', {duration:1, y:'-100%', opacity:0, delay:0.2});
+      gsap.from('.display-4', {duration:1, x:-50, opacity:0, delay:0.5, ease:'back'});
+      </script>
+
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbwdUbRnvX5O1Y4mHdDpumCDLxbq6WNzX0gCOV3MmXdp1L4ZmZVRr_X7ajZ1jPEPnP4V/exec";
       const form = document.forms["kontak-form-website"];
